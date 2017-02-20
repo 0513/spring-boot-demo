@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/common.css">
+    <script src="/js/lib/jQuery.min.3.1.js"></script>
+    <script src="/js/common.js"></script>
+</head>
+<body>
+    <div th:if="${param.error}">
+        用户名或密码错
+    </div>
+    <div th:if="${param.logout}">
+        您已注销成功
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div><label> 用户名 : <input type="text" name="j_username"/> </label></div>
+        <div><label> 密  码 : <input type="password" name="j_password"/> </label></div>
+        <div><input type="submit" value="登录"/></div>
+    </form>
+</body>
+</html>

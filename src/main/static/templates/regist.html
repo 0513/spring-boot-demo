@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<form action="#" th:action="@{/regist}" th:object="${userForm}" method="post">
+    <h2 class="form-signin-heading">Create your account</h2>
+    <div class="form-group ${status.error ? 'has-error' : ''}">
+        <input type="text" th:field="*{username}" placeholder="username"/><br/>
+        <input type="password" th:field="*{password}" /><br/>
+        <input type="password" th:field="*{passwordConfirm}" /><br/>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+</form>
+</body>
+</html>

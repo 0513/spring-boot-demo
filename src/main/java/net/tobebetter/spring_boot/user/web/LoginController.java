@@ -1,4 +1,4 @@
-package net.tobebetter.spring_boot.web;
+package net.tobebetter.spring_boot.user.web;
 
 import net.tobebetter.spring_boot.user.model.User;
 import net.tobebetter.spring_boot.user.service.SecurityService;

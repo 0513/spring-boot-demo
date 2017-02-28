@@ -1,4 +1,4 @@
-package net.tobebetter.spring_boot.web;
+package net.tobebetter.spring_boot.user.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

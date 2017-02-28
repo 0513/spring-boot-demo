@@ -1,4 +1,4 @@
-package net.tobebetter.spring_boot.user.service;
+package net.tobebetter.spring_boot.core.auth;
 
 import net.tobebetter.spring_boot.user.model.Role;
 import net.tobebetter.spring_boot.user.model.User;

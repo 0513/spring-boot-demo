@@ -22,6 +22,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 			.allowCredentials(false).maxAge(3600);
 	}
 
+	/***
+	 * 静态资源访问路径
+	 */
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/**")
+				.addResourceLocations("classpath:/");
+	}
+
 	/**
 	 * 增加拦截器
 	 * 功能同xml中： <mvc:interceptors>
@@ -36,20 +45,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	 * 功能同xml:<mvc:view-controller path="/" view-name="index"/>
 	 * 与net.tobebetter.spring_boot.core.filter.ApplicationFilters#viewResolver()共同工作
      */
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("/pages/index");
-		registry.addViewController("/user/center").setViewName("/pages/user/center");
-		registry.addViewController("/login").setViewName("/pages/login");
-//		registry.addViewController("/index").setViewName("index");
-	}
+//	@Override
+//	public void addViewControllers(ViewControllerRegistry registry) {
+//		registry.addViewController("/").setViewName("/pages/index");
+//		registry.addViewController("/user/center").setViewName("/pages/user/center");
+//		registry.addViewController("/login").setViewName("/templates/login");
+////		registry.addViewController("/index").setViewName("index");
+//	}
 
-	/***
-	 * 静态资源访问路径
-     */
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**")
-				.addResourceLocations("classpath:/");
-	}
 }

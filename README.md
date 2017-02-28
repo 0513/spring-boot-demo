@@ -7,6 +7,7 @@
 * [spring data 规范](http://docs.spring.io/spring-data/jpa/docs/1.5.0.RC1/reference/html/jpa.repositories.html#jpa.query-methods)
 * [RESTful API 设计最佳实践](http://blog.jobbole.com/41233/)
 * [spring boot集成spring security入门](http://blog.didispace.com/springbootsecurity/)
+* [Thymeleaf](http://blog.didispace.com/springbootweb/)
 
 ##问题解决
 * [csrf](http://stackoverflow.com/questions/21128058/invalid-csrf-token-null-was-found-on-the-request-parameter-csrf-or-header)

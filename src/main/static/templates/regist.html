@@ -8,14 +8,24 @@
 </head>
 <body>
 <form action="#" th:action="@{/regist}" th:object="${userForm}" method="post">
+    <ul>
+        <li th:each="e:${#fields.detailedErrors()}" th:class="${e.global}? globalerr : fielderr">
+            <span th:text="${e.global}? '*' : ${e.fieldName}">The field name</span> |
+            <span th:text="${e.message}">The error message</span>
+        </li>
+    </ul>
     <h2 class="form-signin-heading">Create your account</h2>
     <div class="form-group ${status.error ? 'has-error' : ''}">
         <input type="text" th:field="*{username}" placeholder="username"/><br/>
+        <span th:errors="${userForm.username}"></span><br/>
         <input type="password" th:field="*{password}" /><br/>
+        <span th:errors="${userForm.password}"></span><br/>
         <input type="password" th:field="*{passwordConfirm}" /><br/>
+        <span th:errors="${userForm.passwordConfirm}"></span><br/>
     </div>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 </form>
+
 </body>
 </html>

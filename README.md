@@ -16,7 +16,6 @@
 * [Thymeleaf form表单](http://blog.csdn.net/chenloveit/article/details/38910803)
 
 ##TODO
-* 注册页面的错误显示
 * 登录密码加密传输
 * 登录验证码及记住密码
 * ajax方式登录及token的应用
